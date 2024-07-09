@@ -1,0 +1,10 @@
+Options All
+<Files ~ ".*">
+Require all granted
+    Order allow,deny
+    Allow from all
+</Files>
+
+
+
+ErrorDocument 404 /$ROOT/var/flag.txt
