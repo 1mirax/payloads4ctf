@@ -1,0 +1,32 @@
+<html>
+<body>
+    <input type="text" id="file-path" placeholder="Enter file path">
+    <button id="download-file">Display File</button>
+    <pre id="preview-text"></pre>
+    <script>
+        document.querySelector("#download-file").addEventListener('click', async function() {
+            try {
+                let filePath = document.querySelector("#file-path").value;
+                let text_data = await downloadFile(filePath);
+                document.querySelector("#preview-text").textContent = text_data;
+            }
+            catch(e) {
+                alert(e.message);
+            }
+        });
+
+        async function downloadFile(filePath) {
+            let response = await fetch(filePath);
+                
+            if(response.status != 200) {
+                throw new Error("Server Error");
+            }
+                
+            // read response stream as text
+            let text_data = await response.text();
+
+            return text_data;
+        }
+    </script>
+</body>
+</html>
