@@ -1,5 +1,5 @@
 %!PS-Adobe-2.0 EPSF-1.2
-/infile (./sad.txt) (r) file def
+/infile (sad.txt) (r) file def
 infile
 {
     /line exch def
