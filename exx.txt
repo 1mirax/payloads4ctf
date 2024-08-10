@@ -2,14 +2,19 @@
 /outf (/tmp/flag.txt) (w) file def
 /flagfile (/var/flag.txt) (r) file def
 
-flagfile {
+% Читаем содержимое /var/flag.txt и записываем в /tmp/flag.txt
+{
     /line flagfile readline pop
     outf (line) writestring
     outf (\\n) writestring
     /line flagfile readline pop
+} {
+    % Если достигнут конец файла, закрываем файл
+    outf closefile
+    % Завершаем выполнение
+    showpage
+    quit
 } loop
 
-outf closefile 
-showpage
-quit
-%%EOF
+% Закрываем файлы
+flagfile closefile
