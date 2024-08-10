@@ -1,18 +1,7 @@
 %!PS-Adobe-2.0 EPSF-1.2
-/infile (sad.txt) (r) file def
-infile
-{
-    /line exch def
-    line readline
-    {
-        = 
-        line
-        readline
-    } 
-    loop
-} 
-if
-infile closefile
+/Palatino-Roman 20 selectfont
+300 400 moveto
+(Hello, World!) show
 showpage
 quit
 %%EOF
